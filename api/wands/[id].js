@@ -1,4 +1,4 @@
-import { getData } from '../_utils';
+const { getData } = require('../_utils');
 
 export default async function handler(req, res) {
   const { id } = req.query;
