@@ -7,7 +7,6 @@
     "dev": "node api/index.js",
     "seed": "node seed/seed.js"
   },
-  "type": "module",
   "keywords": [],
   "author": "",
   "license": "MIT",
