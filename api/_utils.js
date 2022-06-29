@@ -17,7 +17,7 @@ export async function getData(tableName, id = -1) {
       const [rows] = await connection.query(query, [id]);
 
       if(!rows[0]) {
-        data.message = `No ${tableName == 'hp_character' ? 'Character' : 'Wand'} with the given ID ${id}`;
+        data.message = `No ${tableName == 'hp_character' ? 'Character' : 'Wand'} with ID ${id}`;
         status = 404;
       } else {
         data = rows[0];
@@ -27,6 +27,7 @@ export async function getData(tableName, id = -1) {
     status = 500;
     data.message = 'Something went wrong';
   }
+  
   returnValue.status = status;
   returnValue.data = data;
   return returnValue;
