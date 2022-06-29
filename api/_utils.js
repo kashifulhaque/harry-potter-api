@@ -1,4 +1,4 @@
-import mysql from "mysql2/promise";
+const mysql = require("mysql2/promise");
 
 export async function getData(tableName, id = -1) {
   let query = '';
