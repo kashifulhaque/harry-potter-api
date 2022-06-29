@@ -2,9 +2,9 @@
   "name": "harry-potter-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "api/index.js",
   "scripts": {
-    "dev": "node app.js",
+    "dev": "node api/index.js",
     "seed": "node seed/seed.js"
   },
   "type": "module",

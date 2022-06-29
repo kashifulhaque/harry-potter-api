@@ -1,17 +1,16 @@
 import express from "express";
 import dotenv from "dotenv";
-import mysql from "mysql2/promise";
 
-import { getData } from './util.js';
+import { getData } from './utils.js';
 
 dotenv.config();
 
-const port = 3001;
 const app = express();
 
 app.get("/", (req, res) => {
   res.json({
     message: "Harry Potter API",
+    endpoints: ['/characters', '/characters/:id', '/wands', '/wands/:id']
   });
 });
 
@@ -37,8 +36,6 @@ app.get("/wands/:id", async (req, res) => {
   return res.status(data.status).json(data);
 });
 
-app.listen(port, () => {
-  console.log(`Server listening on http://localhost:${port}`);
-});
+module.exports = app;
 
 // Video URL: https://www.youtube.com/watch?v=GyicOpBFUbw
